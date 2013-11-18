@@ -17,7 +17,7 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 });
 
 // Populate empty DB with dummy data
-require('./lib/db/dummydata');
+//require('./lib/db/dummydata');
 
 // Controllers
 var api = require('./lib/controllers/api');
@@ -42,7 +42,7 @@ app.configure('production', function(){
 });
 
 // Routes
-app.get('/api/awesomeThings', api.awesomeThings);
+app.get('/api/dress', api.getDressList);
 
 // Start server
 var port = process.env.PORT || 3000;

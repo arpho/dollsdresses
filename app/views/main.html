@@ -1,25 +1,22 @@
+
+  <h1>DollsDresses</h1
+<body>
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="#">Bacheca</a></li>
     <li><a href="#">Contact</a></li>
+    <li><a href="#">Log-in</a></li>
   </ul>
-  <h3 class="text-muted">angular fullstack update</h3>
 </div>
 
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">Always a pleasure scaffolding your apps.</p>
-  <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-</div>
-
-<div class="row marketing">
-  <div ng-repeat="thing in awesomeThings">
-      <h4>{{thing.name}}</h4>
-      <p>{{thing.info}}</p>
+  <div ng-repeat="dress in dresses" class="dressList">
+      <h3><a href="dress/{{dress._id}}">{{dress.nome}}</a></h3>
+      <a href="#/phones/{{dress._id}}" ><img ng-src="img/dress/{{dress.main_foto}}" class="thumb"></a>
+      <p>{{dress.descrizione}}</p>
   </div>
-</div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
 </div>
+</body>
