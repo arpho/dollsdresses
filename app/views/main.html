@@ -11,12 +11,18 @@
 </div>
 
 <div class="jumbotron">
-  <div ng-repeat="dress in dresses" class="dressList">
+  <div ng-repeat="dress in dresses | filter:{linea:lineProp}" class="dressList">
       <h3><a href="dress/{{dress._id}}">{{dress.nome}}</a></h3>
       <a href="#/phones/{{dress._id}}" ><img ng-src="img/dress/{{dress.main_foto}}" class="thumb"></a>
       <p>{{dress.descrizione}}</p>
   </div>
 
+
 <div class="footer">
 </div>
+    <div class='right'>
+      Filtra  per Linea:
+        <select ng-model="lineProp" ng-options="item as item for item in lines"></select>
+      
+    </div>
 </body>
