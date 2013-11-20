@@ -13,7 +13,7 @@
 <div class="jumbotron">
   <div ng-repeat="dress in dresses | filter:{linea:lineProp}" class="dressList">
       <h3><a href="/#/dress/:{{dress._id}}">{{dress.nome}}</a></h3>
-      <a href="#/dress/:{{dress._id}}" ><img ng-src="img/dress/{{dress.main_foto}}" class="thumb"></a>
+     <img ng-src="img/dress/{{dress.main_foto}}" class="thumb">
       <p>{{dress.descrizione}}</p>
   </div>
 

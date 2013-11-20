@@ -4,8 +4,7 @@ angular.module('dollsdressesApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute',
-  'angular-carousel'
+  'ngRoute'
 ])
   .config(function ($routeProvider) {
     $routeProvider

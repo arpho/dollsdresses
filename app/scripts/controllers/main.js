@@ -27,6 +27,7 @@ angular.module('dollsdressesApp')
     $http.get('/api/dress/:'+dressId).success(function(dress) {
         $scope.dress = dress;
         $scope.mainPic = dress.main_foto; 
+        $scope.dress.gallery.push(dress.main_foto);
         debug($scope.mainPic);
         $scope.setImage = function(img) { // cambia la foto principale
             $scope.mainPic = img;
