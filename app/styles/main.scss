@@ -26,8 +26,15 @@ body {
 /* Custom page header */
 .header {
     border-bottom: 1px solid #e5e5e5;
+    margin-top: -0.7em;
 }
-
+.jumbotron {
+  border-bottom-color: -moz-use-text-color;
+  border-bottom-style: none;
+  border-bottom-width: 0;
+  position: relative;
+  top: 0.5em;
+}
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
     margin-top: 0;
