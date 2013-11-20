@@ -2,12 +2,12 @@
 <div  class="dressDetails">
     
 <h1>{{dress.nome}}</h1>
-<img ng-src="img/dress/{{mainPic}}" class="dressImg">
+<img ng-src="{{mainPic}}" class="dressImg">
 <div class="dressDescription"><p>{{dress.descrizione}}</p></div>
 <!--div class='carosello'><ul rn-carousel rn-carousel-indicator class="image"><li  ng-repeat="image in dress.gallery" style="background-image:url(img/dress/{{image}});"></li></ul></div-->
     <ul class="dress-thumbs">
   <li ng-repeat="img in dress.gallery">
-    <img class='dress-image' ng-src="img/dress/{{img}}" ng-mouseenter="setImage(img)">
+    <img class='dress-image' ng-src="{{img}}" ng-mouseenter="setImage(img)">
   </li>
 </ul>
 </div>
