@@ -4,7 +4,9 @@ angular.module('dollsdressesApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'angular-md5',
+  'fundoo.services',
 ])
   .config(function ($routeProvider) {
     $routeProvider

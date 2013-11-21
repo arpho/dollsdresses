@@ -3,7 +3,7 @@ var debug = function(s) {
     console.log(s);
 }
 angular.module('dollsdressesApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($rootScope,$scope, $http,md5,createDialog) {
     $http.get('/api/dress').success(function(dresses) {
       $scope.dresses = dresses;
         var lines = [];
@@ -16,8 +16,32 @@ angular.module('dollsdressesApp')
         };
         $scope.lines = lines;
         $scope.lineProp = '';
-        debug('linee');
-        debug(lines);
+        $scope.login = function()
+        //debug($scope.userName+' '+md5.createHash($scope.password));
+        $http.post('/api/login/:'+$scope.userName+'/:'+md5.createHash($scope.password)).success(function(u) {
+            //debug(u);
+            if(u.name) {
+                debug('ciao '+u.name)
+                createDialog([template_url],{
+    id : [modal_id],
+    title: [modal_title],
+    backdrop: [backdrop_visible],
+    success: [modal_success_button],
+    cancel: [modal_cancel_button],
+    controller: [modal_controller],
+    backdropClass: [modal_backdrop_class],
+    footerTemplate: [modal_footer_template],
+    modalClass: [modal_class],
+    css: {
+        [css properties key: value]
+    }
+}, {modal_custom_data});
+                $rootScope.loggedUser = u;
+                
+            } else {
+                debug('username o password errati');
+            }
+        });
         
     });
   }).controller('DressCtrl',['$scope','$http','$routeParams', function($scope,$http,$routeParams){
