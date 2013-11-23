@@ -28,6 +28,20 @@ body {
     border-bottom: 1px solid #e5e5e5;
     margin-top: -0.7em;
 }
+
+.hello {
+  position: absolute;
+  left: -190px;
+  top: 133px;
+}
+
+.right_column {
+  width: 168px;
+  position: relative;
+  top: -39em;
+  left: 31em;
+}
+
 .jumbotron {
   border-bottom-color: -moz-use-text-color;
   border-bottom-style: none;
@@ -152,3 +166,5 @@ ul.dress-thumbs {
   list-style-type: none;
 }
 
+//body.dragOver #file-drop{display:block;} /* During drag */
+//body #file-drop{z-index:1000;position:fixed;top:0;left:0;width:100%;height:100%;display:none;} /* No drag */

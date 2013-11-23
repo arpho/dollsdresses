@@ -4,17 +4,19 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a href="#">Home</a></li>
-    <li><a href="#/workingon">Bacheca</a></li>
-    <li><a href="#/workingon">Contact</a></li>
-    <!--li><a href="#/workingon">Log-in</a></li-->
+    <li><a href="#/bacheca">Bacheca</a></li>
+    <li><a href="#/contatti">Contatti</a></li>
+      
+    <li><a href="#/back_end">Riservato</a></li>
   </ul>
 </div>
 
 <div class='login'>
 <h3>Log In:</h3>
 userName<input type="text" ng-model="userName"/><br>
-password  <input type="text" ng-model="password"/><br>
+password  <input type="password" ng-model="password"/><br>
 <button ng-click="login()">Login</button>
+
 </div>
 
 <div class="jumbotron">
@@ -23,11 +25,11 @@ password  <input type="text" ng-model="password"/><br>
      <img ng-src="{{dress.main_foto}}" class="thumb">
       <p>{{dress.descrizione}}</p>
   </div>
-
+<div class='hello' ng-show="loggedUser"><img ng-src="{{loggedUser.icon}}">{{userName}}</div>
 
 <div class="footer">
 </div>
-    <div class='right'>
+    <div class='right_column'>
       Filtra  per Linea:<br>
         <select ng-model="lineProp" ng-options="item as item for item in lines"></select>
       

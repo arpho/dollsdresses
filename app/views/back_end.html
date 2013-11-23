@@ -1,0 +1,9 @@
+<div ng-show='loggedUser.superuser'> 
+<img ng-src="img/etc/work_in_progress_md.png">
+<ul>    
+<li><a href='/#/add_dress'>aggiungi un nuovo vestito</a></li>
+<li><a href='/#/update_dress'>modifica un vestito</a></li>
+    </ul>
+</div>
+<div ng-show='{{loggedUser == null}}'>devi loggarti per poter accedere a quest'area</div>
+<div ng-show='{{loggedUser.superuser == false}}'>non godi dei diritti sufficienti per poter accedere a quest'area</div>
