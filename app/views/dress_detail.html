@@ -4,7 +4,7 @@
 <h1>{{dress.nome}}</h1>
 <img ng-src="{{mainPic}}" class="dressImg">
 <div class="dressDescription"><p>{{dress.descrizione}}</p>
-    <p ng-show="dress.prezzo>0"> prezzo: {{dress.prezzo | currency:"€"}}</p>
+    <p ng-show="dress.prezzo>0" class="prezzo"> prezzo: {{dress.prezzo | currency:"€"}}</p>
     </div>
 <!--div class='carosello'><ul rn-carousel rn-carousel-indicator class="image"><li  ng-repeat="image in dress.gallery" style="background-image:url(img/dress/{{image}});"></li></ul></div-->
     <ul class="dress-thumbs">
@@ -13,3 +13,4 @@
   </li>
 </ul>
 </div>
+
