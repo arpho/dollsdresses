@@ -87,8 +87,11 @@ angular.module('dollsdressesApp')
         $scope.dress = dress;
         $scope.mainPic = dress.main_foto; 
         $scope.dress.gallery.push(dress.main_foto);
-        debug($scope.mainPic);
+        debug('dress');
+        debug(dress);
+    
         $scope.setImage = function(img) { // cambia la foto principale
+            //debug('change pict');
             $scope.mainPic = img;
         }
     })
