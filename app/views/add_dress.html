@@ -1,3 +1,8 @@
-<div id="file-drop" imagedrop on-image-drop="imageDropped()">
-    Drop an image here to upload
+<div ng-controller="AddDresCtrl">
+   <form action="/uploads" ng-upload> 
+     <input type="file" name="avatar"></input>
+     <input type="submit" value="Upload" 
+       upload-submit="results(content, completed)"></input>
+   </form>
+ </div>
 </div>

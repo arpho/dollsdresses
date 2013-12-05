@@ -44,6 +44,7 @@ app.configure('production', function(){
 // Routes
 app.get('/api/dress', api.getDressList);
 app.get('/api/dress/:dressId',api.getDress);
+app.get('/uploads?:fileName',api.getFile)
 app.post('/api/login/',api.login);
 
 // Start server
