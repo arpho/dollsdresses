@@ -21,9 +21,8 @@ password  <input type="password" ng-model="password"/><br>
 
 <div class="jumbotron">
   <div ng-repeat="dress in dresses | filter:{linea:lineProp}" class="dressList">
-      <h3><a href="/#/dress/:{{dress._id}}">{{dress.nome}}</a></h3>
+     <div class="dressName"> <h3><a href="/#/dress/:{{dress._id}}">{{dress.nome}}</a></h3></div>
      <img ng-src="{{dress.main_foto}}" class="thumb">
-      <p>{{dress.descrizione}}</p>
   </div>
 <div class='hello' ng-show="loggedUser"><img ng-src="{{loggedUser.icon}}">{{userName}}</div>
 
