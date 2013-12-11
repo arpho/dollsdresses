@@ -15,7 +15,7 @@ angular.module('dollsdressesApp')
             
         };
         $scope.lines = lines;
-        $scope.lineProp = '';
+        //$scope.lineProp = 'Fashion';
         
         $scope.login = function(){
             //debug($scope.userName+' '+md5.createHash($scope.password));
